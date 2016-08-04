@@ -24,9 +24,6 @@ app.run(function($ionicPlatform) {
 });
 
 app.controller('mainController', function($scope){
-    $scope.mensagem = '';
-
-    $scope.newMensagem = function(novaMensagem) {
-        $scope.mensagem = novaMensagem;
-    };
+    var tasks = new getTask();
+    $scope.lista = tasks.itens;
 })
