@@ -26,4 +26,7 @@ app.run(function($ionicPlatform) {
 app.controller('mainController', function($scope){
     var tasks = new getTask();
     $scope.lista = tasks.itens;
+    $scope.onMarTask = function(item) {
+      item.finalizada = !item.finalizada;
+    }
 })

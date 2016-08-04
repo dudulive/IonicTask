@@ -31,8 +31,18 @@
       <ion-content ng-controller="mainController">
         <ion-list>
             <ion-item ng-repeat="item in lista track by $index">
-              {{item}}
-            </ion-item>
+              <div class="row">
+                 <div class="col col-90">
+                      {{item.nome}}
+                 </div>
+                 <div class="col col-10">
+                   <button class="button button-small button-positive button-outline"
+                    ng-click="onMarTask(item)">
+                    <i class="icon ion-checkmark" ng-show="item.finalizada"></i>
+                  </button>
+                 </div>
+               </div>
+              </ion-item>
         </ion-list>
       </ion-content>
     </ion-pane>

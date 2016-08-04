@@ -1,3 +1,5 @@
 function getTask(){
-  this.itens = ['Item 01','Item 02','Item 03'];
+  this.itens = [{nome:'Item 01', finalizada:false},
+  {nome:'Item 02',finalizada:false},
+  {nome:'Item 03',finalizada:false}];
 }
